@@ -1,0 +1,25 @@
+{
+    "name": "artbyrab/crumbley",
+    "description": "A PHP breadcrumbs library",
+    "keywords": ["Crumbley", "php", "Breadcrumbs", "PHP Breadcrumbs", "PHP Breadcrumb library", "package"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "artbyrab",
+            "email": "contact@art-by-rab.com"
+        }
+    ],
+    "type": "package",
+    "require": {
+        "php": ">=7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.*",
+        "friendsofphp/php-cs-fixer": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "artbyrab\\crumbley\\": "src/"
+        }
+    }
+}
