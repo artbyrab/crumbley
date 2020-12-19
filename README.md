@@ -15,16 +15,22 @@ Crumbley is a super simple PHP breadcrumb library. You create crumbs, add them t
 
 The reccomended way to install is via Composer.
 
+Ensure your minimum-stability is set to dev:
+
+```json
+"minimum-stability": "dev",
+```
+
 Either install in the project via terminal:
 
 ```json
-$ composer require artbyrab/crumbly:~1.0
+$ composer require artbyrab/crumbley
 ```
 
 or add it to your composer.json file:
 
 ```json
-"artbyrab/crumbly": "~1.0"
+"artbyrab/crumbley": "master@dev"
 ```
 
 ## Usage
