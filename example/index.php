@@ -74,6 +74,10 @@ $breadcrumbs->add(
             display:inline;
         }
 
+        .breadcrumbs .separator {
+            color:LightSlateGrey;
+        }
+
         pre {
             background:LightGreen;
             padding:20px;
@@ -83,24 +87,27 @@ $breadcrumbs->add(
 </head>
     <body>
         <div class="content">
-            <h1>Crumbly</h1>
+            <h1>Crumbley</h1>
+            <img src="../files/graphics/crumbley-logo-small.png" />
             <h2>A PHP breadcrumbs library</h2>
-            <p>This is an example of Crumbly:</p>
+            <p>This is an example of Crumbley:</p>
             <br />
             <div class="breadcrumbs">
-                <?php foreach ($breadcrumbs->getCrumbs() as $crumb) { ?>
-                    <?php if ($crumb->isActive() == true) { ?>
-                        <li>
-                            <a href="<?=$crumb->getUrl();?>"><?=$crumb->getLabel();?></a>
-                            <span class="separator">></span>
-                        </li>
+                <ul>
+                    <?php foreach ($breadcrumbs->getCrumbs() as $crumb) { ?>
+                        <?php if ($crumb->isActive() == true) { ?>
+                            <li>
+                                <a href="<?=$crumb->getUrl();?>"><?=$crumb->getLabel();?></a>
+                                <span class="separator">></span>
+                            </li>
+                        <?php }; ?>
+                        <?php if ($crumb->isActive() == false) { ?>
+                            <li>
+                                <?=$crumb->getLabel()?>
+                            </li>
+                        <?php }; ?>
                     <?php }; ?>
-                    <?php if ($crumb->isActive() == false) { ?>
-                        <li>
-                            <?=$crumb->getLabel()?>
-                        </li>
-                    <?php }; ?>
-                <?php }; ?>
+                </ul>
             </div>
             <br />
             <pre>use artbyrab\crumbley\Breadcrumbs;
