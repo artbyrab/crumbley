@@ -1,5 +1,7 @@
 # Crumbley
 
+![Image](files/graphics/crumbley-logo-small.png?raw=true)
+
 Crumbley is a super simple PHP breadcrumb library. You create crumbs, add them to your breadcrumbs then display them in your app.
 
 ## Requirements
@@ -23,7 +25,7 @@ Ensure your minimum-stability is set to dev:
 
 Either install in the project via terminal:
 
-```json
+```shell
 $ composer require artbyrab/crumbley
 ```
 
